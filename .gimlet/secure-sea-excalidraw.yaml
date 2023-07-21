@@ -1,0 +1,19 @@
+app: excalidraw
+env: secure-sea
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.47.0
+values:
+  gitRepository: laszlocph/excalidraw
+  gitSha: '{{ .SHA }}'
+  image:
+    pullPolicy: Always
+    repository: 127.0.0.1:32447/excalidraw
+    tag: '{{ .SHA }}'
+  replicas: 3
+  resources:
+    ignore: true
+  vars:
+    ZSOLTi: ALMA
